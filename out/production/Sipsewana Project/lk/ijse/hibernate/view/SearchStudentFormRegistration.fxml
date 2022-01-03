@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="searchStudentContext" prefHeight="377.0" prefWidth="582.0" style="-fx-background-color: #2f3640;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.controller.SearchStudentFormRegistrationController">
+   <children>
+      <TextField fx:id="txtSearchBar" focusTraversable="false" layoutX="32.0" layoutY="35.0" prefHeight="31.0" prefWidth="468.0" promptText="Search here">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </TextField>
+      <TableView fx:id="tblStudentDetails" layoutX="34.0" layoutY="89.0" prefHeight="257.0" prefWidth="514.0">
+         <columns>
+            <TableColumn fx:id="colRegistrationNo" prefWidth="119.0" text="Registration No" />
+            <TableColumn fx:id="colStudentName" prefWidth="544.0" text="Student Name" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnSearch" buttonType="RAISED" focusTraversable="false" layoutX="497.0" layoutY="35.0" onAction="#searchStudentOnAction" prefHeight="31.0" prefWidth="51.0" style="-fx-background-color: #05c46b;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <ImageView disable="true" fitHeight="83.0" fitWidth="24.0" layoutX="512.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/magnifying-glass.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

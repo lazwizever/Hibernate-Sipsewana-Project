@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="hibernateCaches">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/mysql_connector.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jfoenix-8.0.8.jar!/" />
+      <root url="file://$PROJECT_DIR$/lib/hibernateCaches" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/hibernateCaches" recursive="false" />
+  </library>
+</component>

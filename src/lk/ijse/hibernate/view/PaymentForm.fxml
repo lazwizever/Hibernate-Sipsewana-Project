@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="paymentContext" prefHeight="542.0" prefWidth="1096.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.controller.PaymentFormController">
+   <children>
+      <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="173.0" layoutX="289.0" layoutY="401.0" stroke="BLACK" strokeType="INSIDE" width="767.0" />
+      <JFXTextField fx:id="txtRegistrationNo" focusTraversable="false" labelFloat="true" layoutX="496.0" layoutY="92.0" prefHeight="31.0" prefWidth="288.0" promptText="Registration No" />
+      <JFXTextField fx:id="txtStName" focusTraversable="false" labelFloat="true" layoutX="286.0" layoutY="172.0" prefHeight="31.0" prefWidth="498.0" promptText="Full Name" />
+      <Line fx:id="line2" endX="85.0" layoutX="963.0" layoutY="515.0" startX="-93.5" />
+      <Line fx:id="line3" endX="85.0" layoutX="963.0" layoutY="557.0" startX="-93.5" />
+      <Line fx:id="line4" endX="85.0" layoutX="963.0" layoutY="567.0" startX="-93.5" />
+      <Label fx:id="balanceLbl" layoutX="299.0" layoutY="519.0" text="Balance (Rs)">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="cashLbl" layoutX="299.0" layoutY="474.0" text="Cash (Rs)">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCash" focusTraversable="false" layoutX="869.0" layoutY="477.0" onAction="#cashOnAction" prefHeight="31.0" prefWidth="179.0" />
+      <Label fx:id="amountLbl" layoutX="299.0" layoutY="429.0" text="Amount (Rs)">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAmount" alignment="CENTER_RIGHT" layoutX="937.0" layoutY="434.0" prefHeight="27.0" prefWidth="107.0" text="0.00">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnSearchStudent" alignment="CENTER" buttonType="RAISED" focusTraversable="false" layoutX="284.0" layoutY="88.0" onAction="#moveToSearchStudentListOnAction" prefHeight="39.0" prefWidth="172.0" style="-fx-background-color: #05c46b;" text="Search Student" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnGenerateBill" buttonType="RAISED" focusTraversable="false" layoutX="912.0" layoutY="596.0" onAction="#addPaymentOnAction" prefHeight="39.0" prefWidth="144.0" style="-fx-background-color: #44bd32;" text="Register" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbFeeType" focusTraversable="false" layoutX="821.0" layoutY="92.0" prefHeight="31.0" prefWidth="234.0" promptText="Program Type" />
+      <JFXTextField fx:id="txtAddress" focusTraversable="false" labelFloat="true" layoutX="288.0" layoutY="248.0" prefHeight="31.0" prefWidth="364.0" promptText="Address" />
+      <JFXTextField fx:id="txtDOB" focusTraversable="false" labelFloat="true" layoutX="819.0" layoutY="172.0" prefHeight="31.0" prefWidth="234.0" promptText="Date Of Birth" />
+      <JFXTextField fx:id="txtContactNo" focusTraversable="false" labelFloat="true" layoutX="679.0" layoutY="248.0" prefHeight="31.0" prefWidth="375.0" promptText="Contact No" />
+      <Label fx:id="lblBalance" layoutX="964.0" layoutY="519.0" prefHeight="27.0" prefWidth="78.0" text="0.00">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnClear" buttonType="RAISED" focusTraversable="false" layoutX="763.0" layoutY="596.0" onAction="#clearFieldsOnAction" prefHeight="39.0" prefWidth="144.0" style="-fx-background-color: #576574;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Text layoutX="284.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Program Registration">
+         <font>
+            <Font name="Leelawadee UI Bold" size="32.0" />
+         </font>
+      </Text>
+      <Line fx:id="line1" endX="512.0" layoutX="541.0" layoutY="39.0" startX="81.0" />
+      <Rectangle arcHeight="250.0" arcWidth="300.0" fill="#2f3640" height="762.0" layoutX="-168.0" layoutY="-102.0" stroke="#1b1e22" strokeType="INSIDE" strokeWidth="10.0" width="418.0" />
+      <ImageView fitHeight="399.0" fitWidth="340.0" layoutX="-42.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/student.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="12.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sipsewana institute">
+         <font>
+            <Font name="Leelawadee UI Bold" size="24.0" />
+         </font>
+      </Text>
+      <JFXButton alignment="CENTER_RIGHT" buttonType="RAISED" focusTraversable="false" layoutX="18.0" layoutY="15.0" onAction="#backToUserFormOnAction" prefHeight="39.0" prefWidth="58.0" style="-fx-background-color: #2f3640; -fx-border-color: #ffffff; -fx-border-width: 3; -fx-background-radius: 10; -fx-border-radius: 10;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView disable="true" fitHeight="57.0" fitWidth="39.0" layoutX="27.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/home12345.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="60.0" arcWidth="60.0" fill="#2f3640" height="128.0" layoutX="15.0" layoutY="428.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" width="219.0" />
+      <Label fx:id="lblDate" layoutX="55.0" layoutY="448.0" prefHeight="36.0" prefWidth="151.0" text="26-03-2000" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="33.0" layoutY="481.0" prefHeight="59.0" prefWidth="195.0" text="14:30 PM" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtEmail" focusTraversable="false" labelFloat="true" layoutX="289.0" layoutY="319.0" prefHeight="31.0" prefWidth="767.0" promptText="E-mail" />
+   </children>
+</AnchorPane>

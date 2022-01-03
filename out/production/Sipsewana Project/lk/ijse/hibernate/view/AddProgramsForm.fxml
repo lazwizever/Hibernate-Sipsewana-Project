@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="addProgramsContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="597.0" prefWidth="976.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.controller.AddProgramsFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1b1e22" height="75.0" layoutX="-1.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="984.0" />
+      <Label fx:id="lblDate" layoutX="852.0" layoutY="7.0" text="26-03-2000" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="828.0" layoutY="30.0" text="14:45 PM" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtProgramName" focusTraversable="false" labelFloat="true" layoutX="407.0" layoutY="174.0" prefHeight="31.0" prefWidth="257.0" promptText="Program Name" />
+      <JFXButton fx:id="btnAddSubject" buttonType="RAISED" focusTraversable="false" layoutX="755.0" layoutY="153.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#AddSubjectOnAction" prefHeight="39.0" prefWidth="180.0" style="-fx-background-color: #44bd32;" text="Add Program" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtSubjectId" focusTraversable="false" labelFloat="true" layoutX="45.0" layoutY="174.0" prefHeight="31.0" prefWidth="257.0" promptText="Program Id" />
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="10.0" layoutY="12.0" onAction="#backToUserFormOnAction" prefHeight="50.0" prefWidth="60.0" style="-fx-background-color: #1b1e22; -fx-border-color: #ffffff; -fx-border-width: 3; -fx-border-radius: 15;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Text fill="WHITE" layoutX="407.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sipsewana Institute">
+         <font>
+            <Font name="Leelawadee UI Bold" size="24.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="159.0" fitWidth="146.0" layoutX="292.0" layoutY="-34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/student.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="75.0" fitWidth="35.0" layoutX="23.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/home12345.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtProgramDuration" focusTraversable="false" labelFloat="true" layoutX="45.0" layoutY="237.0" prefHeight="31.0" prefWidth="257.0" promptText="Program Duration" />
+      <JFXTextField fx:id="txtProgramFee" focusTraversable="false" labelFloat="true" layoutX="407.0" layoutY="237.0" prefHeight="31.0" prefWidth="257.0" promptText="Program Fee" />
+      <TableView fx:id="tblProgramDetails" focusTraversable="false" layoutX="47.0" layoutY="305.0" prefHeight="271.0" prefWidth="888.0">
+        <columns>
+          <TableColumn fx:id="colProgramId" prefWidth="137.0" text="Program Id" />
+          <TableColumn fx:id="colProgramName" prefWidth="406.0" text="Traning Program" />
+            <TableColumn fx:id="colProgramDuration" prefWidth="176.0" text="Duration" />
+            <TableColumn fx:id="colProgramFee" prefWidth="168.0" text="Fee(LKR)" />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="755.0" layoutY="199.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#updateProgramsOnAction" prefHeight="39.0" prefWidth="180.0" style="-fx-background-color: #2f3640;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Text layoutX="37.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Programs">
+         <font>
+            <Font name="Leelawadee UI Bold" size="32.0" />
+         </font>
+      </Text>
+      <Line fx:id="line1" endX="640.0" layoutX="294.0" layoutY="103.0" startX="-26.0" />
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="755.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#clearOnAction" prefHeight="39.0" prefWidth="180.0" style="-fx-background-color: #576574;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

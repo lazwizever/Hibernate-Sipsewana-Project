@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="loginContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="953.0" style="-fx-background-color: #2f3640;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.controller.LoginFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1b1e22" height="608.0" layoutX="-5.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="556.0" />
+      <Rectangle arcHeight="600.0" arcWidth="600.0" fill="#2f3640" height="359.0" layoutX="462.0" layoutY="277.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="431.0" />
+      <Rectangle arcHeight="600.0" arcWidth="600.0" fill="#1b1e22" height="351.0" layoutX="268.0" layoutY="-22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="393.0" />
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="623.0" layoutY="439.0" onAction="#loginOnAction" prefHeight="44.0" prefWidth="286.0" style="-fx-background-color: #05c46b;" text="Login">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtUserName" focusTraversable="false" layoutX="623.0" layoutY="206.0" onMouseClicked="#invisibleUserNameWarningMessage" prefHeight="44.0" prefWidth="286.0" promptText="User Name">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <JFXCheckBox fx:id="checkBoxShowPassword" focusTraversable="false" layoutX="622.0" layoutY="369.0" text="Show Password" textFill="WHITE" unCheckedColor="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXCheckBox>
+      <ImageView fitHeight="752.0" fitWidth="677.0" layoutX="-95.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/student.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="345.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ipsewana">
+         <font>
+            <Font name="Sitka Display" size="28.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="314.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nstitute">
+         <font>
+            <Font name="Sitka Display" size="28.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="315.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="S">
+         <font>
+            <Font name="Sitka Display" size="60.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="295.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I">
+         <font>
+            <Font name="Sitka Display" size="60.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="14.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sipsewana Institute">
+         <font>
+            <Font name="Leelawadee UI Bold" size="65.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="20.0" fitWidth="18.0" layoutX="86.0" layoutY="577.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/NicePng_copyright-symbol-png_247730.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="111.0" layoutY="591.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2021 Sipsewana Inc.All rights reserved." />
+      <Text fill="WHITE" layoutX="15.0" layoutY="590.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright" />
+      <PasswordField fx:id="txtPassWord" focusTraversable="false" layoutX="622.0" layoutY="286.0" onMouseClicked="#invisiblePasswordWarningMessage" prefHeight="44.0" prefWidth="286.0" promptText="Password">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </PasswordField>
+      <Label fx:id="lblUserNameWarningMessage" focusTraversable="false" layoutX="701.0" layoutY="253.0" text="* Inalid UserName" textFill="#ff4646" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="passwordWarningMessage" focusTraversable="false" layoutX="702.0" layoutY="332.0" text="* Inalid Password" textFill="#ff4646" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtShowPassword" focusTraversable="false" layoutX="622.0" layoutY="286.0" prefHeight="44.0" prefWidth="286.0" visible="false" />
+   </children>
+</AnchorPane>
